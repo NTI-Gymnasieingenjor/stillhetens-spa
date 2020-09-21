@@ -34,12 +34,13 @@ De används när vi skapar nya funktioner som då måste godkännas av resten av
 Använd **CSS Less**
 
 ## Kodningsstandard
-- **Spaces**: 4
-- **Kommentarer**: Engelska över funktionen, mellanslag mellan "//" och meningen, stor bokstav
--**Namngivning**: Engelska, Klasser med storbokstav (UpperCamelCase)
-- **Variabel**: let, stor bokstav som delar upp flera ord i en variabel som "pizzaFooter". Liten bokstav i början (lowerCamelCase)
-- **Funktioner**: non lambda functions
-- **HTML/CSS**: Bara CSS inline i HTML filen när det är någonting som ändras med JavaScript
-- **Självstängande HTML taggar ska ha ett slash i slutet.**
+**Spaces**: 4 <br>
+**Kommentarer**: Engelska över funktionen, mellanslag mellan "//" och meningen, stor bokstav <br>
+**Namngivning**: Engelska, Klasser med storbokstav (UpperCamelCase) <br>
+**Variabel**: let, stor bokstav som delar upp flera ord i en variabel som "pizzaFooter". Liten bokstav i början (lowerCamelCase) <br>
+**Funktioner**: non lambda functions <br>
+**HTML/CSS**: Bara CSS inline i HTML filen när det är någonting som ändras med JavaScript <br>
+**Självstängande HTML taggar ska ha ett slash i slutet.** 
+
 
 ## Programmeringsspråk
