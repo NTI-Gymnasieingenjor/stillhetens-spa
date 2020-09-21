@@ -13,9 +13,10 @@ pages:
     - master
 
 tests:
-  image: python:latest
+  image: selenium/standalone-chrome
   script:
-    - apt-get install -y libnss3=2:3.26.2-1.1+deb9u1 
-    - python -m pip install selenium
+    - sudo apt update
+    - sudo apt install python3-pip -y
+    - pip3 install selenium
     - cd tests/webtests
-    - python BaseTest.py
+    - python3 BaseTest.py
