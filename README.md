@@ -12,7 +12,7 @@ https://docs.google.com/spreadsheets/d/1kiAmi3q5drQSVnUuvtOgJzjKzN5YOSItwBi-TEz5
 
 ## Miljöutvecklingsstandard
 
-**Editor** - Visual Studio Code 1.48.2
+**Editor** - Visual Studio Code 1.49.1
 Plugins för VSCode:
 - Live Server
 - Beautify
