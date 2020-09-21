@@ -5,10 +5,10 @@ pages:
   script:
     - mkdir .public
     - cp -r ./public/* .public
-    - mv .public publicFolder
+    - mv .public public
   artifacts:
     paths:
-      - publicFolder
+      - public
   only:
     - master
 
