@@ -7,4 +7,10 @@ if platform == "linux":
     exe=""
 else:
     exe=".exe"
-driver = webdriver.Chrome(executable_path=(os.getcwd() + "/../chromedriver" + exe))
+
+options = webdriver.ChromeOptions()
+options.add_argument("--headless")
+driver = webdriver.Chrome(executable_path=(os.getcwd() + "/../chromedriver" + exe), options=options)
+driver.get("google.com")
+
+assert driver.find_element_by_id("hplogo")

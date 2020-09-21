@@ -11,3 +11,10 @@ pages:
       - publicFolder
   only:
     - master
+
+tests:
+  image: python:latest
+  script:
+    - python -m pip install selenium
+    - cd tests/webtests
+    - python BaseTest.py
