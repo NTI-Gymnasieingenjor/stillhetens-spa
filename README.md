@@ -22,7 +22,7 @@ Plugins för VSCode:
 - Python
 
 **Fildelning** - GitLab <br>
-**OS** - Windows 10 1909 <br>
+**OS** - Windows 10 1909 / Ubuntu 20.04 / Manjaro 20.1<br>
 **Browsers** - Firefox 80 / Chrome 85 / Epiphany 3.36.4-1  <br>
 **Skärmupplösning** - 2560x1440, 1920x1080 <br>
 **Tester** - Selenium for Python <br>
