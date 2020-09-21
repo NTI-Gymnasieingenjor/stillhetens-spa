@@ -1,6 +1,10 @@
 import os
 from selenium import webdriver 
 import argparse
+from sys import platform
 
-print()
-driver = webdriver.Chrome(os.getcwd() + "/../chromedriver.exe")
+if platform == "linux":
+    exe=""
+else:
+    exe=".exe"
+driver = webdriver.Chrome(executable_path=(os.getcwd() + "/../chromedriver" + exe))
