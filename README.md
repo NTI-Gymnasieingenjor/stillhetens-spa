@@ -4,7 +4,7 @@
 
 ## Definition of Done
 - Allting ska vara presenterbart
-- Alla ska ha läst dokumentation och godkänna dom.
+- Alla ska ha läst dokumentation och godkänt den.
 - Tester ska vara skrivna och fungera (innan featuren skrivs) 
 - Godkänd av gruppen, både design och utseende. Samt kodmässigt, om det följer kodningsstandarden och är förståeligt.
 - Bearbetat feedback från gruppmedlemmar.
