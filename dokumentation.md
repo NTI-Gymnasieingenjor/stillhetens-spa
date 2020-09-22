@@ -2,4 +2,3 @@
 
 ## Validering 
 
-pip install pycurl
