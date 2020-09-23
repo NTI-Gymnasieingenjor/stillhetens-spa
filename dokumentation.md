@@ -14,3 +14,5 @@ eller
 python htmlValidering.py
 ``` 
 Detta kör valideringen lokalt.
+
+## Tester i selenium
