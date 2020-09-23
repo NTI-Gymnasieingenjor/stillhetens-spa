@@ -3,6 +3,9 @@ import json
 import glob
 from colorama import Fore, Back, Style
 
+# The variable that turns to true when there's an error
+exitVar = False
+
 def sendFileAndPrint(filePath: str):
     # Creates a variable that opens the HTML file and stores the data in binary format
     htmlFile = open(filePath, 'rb').read()
@@ -18,7 +21,6 @@ def sendFileAndPrint(filePath: str):
         print("Validation Succeded")
         pass
     else:
-        exitVar = False
         # For-loop that prints out all the errors and warnings in the "messages" list
         for i in range(len(output)):
             exitVar = True
@@ -34,9 +36,10 @@ def sendFileAndPrint(filePath: str):
             print("Radnummer:",messages["lastLine"])
             print("Meddelande:", messages["message"])
             print("--------------------")
-        # If error message occurs, validation fails 
-        if exitVar == True:
-            exit(1)
 # Looks for all the HTML files in the public directory to send to the validator
 for file in glob.glob("../../public/*.html"):
     sendFileAndPrint(file)
+    
+# If error message occurs, validation fails 
+if exitVar == True:
+    exit(1)
