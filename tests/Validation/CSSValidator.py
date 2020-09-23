@@ -1,5 +1,4 @@
 import glob
-import subprocess
 import os
 import json
 from colorama import Fore, Back, Style
