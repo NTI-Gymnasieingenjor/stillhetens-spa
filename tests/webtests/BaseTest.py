@@ -3,7 +3,8 @@ from selenium import webdriver
 import argparse
 from sys import platform
 
-# Checks if the test is run on Linux or Windows
+# Checks if the test is run on Linux or Windows, 
+# and chooses driver accordingly
 if platform == "linux":
     exe=""
 else:
