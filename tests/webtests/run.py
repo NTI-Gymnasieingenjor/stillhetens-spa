@@ -3,6 +3,8 @@ from selenium import webdriver
 import argparse
 from sys import platform
 
+from infoTest import InfoTest
+
 # Checks if the test is run on Linux or Windows, 
 # and chooses driver accordingly
 if platform == "linux":
