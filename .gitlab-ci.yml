@@ -1,5 +1,5 @@
-# This file is a template, and might need editing before it works on your project.
-# Full project: https://gitlab.com/pages/plain-html
+image: thevikingtech/pythonselenium:Requests
+
 pages:
   stage: deploy
   script:
@@ -13,10 +13,19 @@ pages:
     - master
 
 tests:
-  image: selenium/standalone-chrome
+  stage: test
   script:
-    - sudo apt update
-    - sudo apt install python3-pip -y
-    - pip3 install selenium
     - cd tests/webtests
     - python3 BaseTest.py
+
+html:
+  stage: test
+  script:
+    - cd tests/Validation
+    - python3 HTMLValidator.py
+
+css:
+  stage: test
+  script:
+    - cd tests/Validation
+    - python3 CSSValidator.py
