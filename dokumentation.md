@@ -1,5 +1,7 @@
 # Dokumentation
 
+**Krav**: Python
+
 ## Validering 
 Navigera in i tests\validation\ mappen med valfri kommandotolk.
 
