@@ -1,9 +1,5 @@
-import requests
 import glob
 import os
-import urllib3
-from poster3.encode import multipart_encode
-import base64
 
 
 def sendFileAndPrint(filePath: str):    
