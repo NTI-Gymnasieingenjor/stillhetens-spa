@@ -21,7 +21,7 @@ Detta kör valideringen lokalt.
 Navigera in i tests\webtests\ mappen med valfri kommandotolk.
 Kör 
 ```python
-python BaseTest.py
+python run.py
 ``` 
 Detta kör testerna lokalt.
 ### Skapa tester
