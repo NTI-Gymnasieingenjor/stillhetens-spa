@@ -1,5 +1,9 @@
 image: thevikingtech/pythonselenium:Requests
 
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+
 pages:
   stage: deploy
   script:
@@ -9,23 +13,38 @@ pages:
   artifacts:
     paths:
       - public
-  only:
-    - master
+  rules:
+    - changes:
+        - public/**/*
+        - tests/validation/*
+      if: $CI_COMMIT_BRANCH == "master"
 
 tests:
   stage: test
   script:
     - cd tests/webtests
     - python3 BaseTest.py
+  only:
+    changes:
+      - public/**/*
+      - tests/webtests/**/*
 
-html:
+htmlValidator:
   stage: test
   script:
-    - cd tests/Validation
-    - python3 HTMLValidator.py
+    - cd tests/validation
+    - python3 htmlValidator.py
+  only:
+    changes:
+      - public/*.html
+      - tests/validation/htmlValidator.py
 
-css:
+cssValidator:
   stage: test
   script:
-    - cd tests/Validation
-    - python3 CSSValidator.py
+    - cd tests/validation
+    - python3 cssValidator.py
+  only:
+    changes:
+      - public/assets/less/dist/*.css
+      - tests/validation/cssValidator.py
