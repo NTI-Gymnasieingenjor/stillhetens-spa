@@ -4,28 +4,39 @@ import glob
 from colorama import Fore, Back, Style
 
 def sendFileAndPrint(filePath: str):
+    # Creates a variable that opens the HTML file and stores the data in binary format
     htmlFile = open(filePath, 'rb').read()
+    # Specifies to the validator that the content that is being sent to it is a HTML file
     headers = {'Content-Type': 'text/html'}
+    # Sends a request to the validator that includes the content in the HTML file
     req = requests.post(url='http://validator.w3.org/nu/?out=json', data=htmlFile, headers=headers)
+    # Variable that stores the output that is sent back from the validator
+    # "messages" is a list that stores all the errors and warnings sent back from the validator
     output = req.json()["messages"]
+    # If the "messages" list is empty, the validation succeeds
     if len(output) == 0:
         print("Validation Succeded")
         pass
     else:
         exitVar = False
+        # For-loop that prints out all the errors and warnings in the "messages" list
         for i in range(len(output)):
             exitVar = True
             messages = output[i]
             print("--------------------")
+            # Color scheme for error messages
             if messages["type"] == "error":
                 print(Back.RED + "ERROR" + Style.RESET_ALL)
+            # Color scheme for warning messages
             if messages["type"] == "info":
                 print(Back.YELLOW + Fore.BLACK + "WARNING" + Style.RESET_ALL)
             print("Fil:", filePath)
             print("Radnummer:",messages["lastLine"])
             print("Meddelande:", messages["message"])
             print("--------------------")
+        # If error message occurs, validation fails 
         if exitVar == True:
             exit(1)
+# Looks for all the HTML files in the public directory to send to the validator
 for file in glob.glob("../../public/*.html"):
     sendFileAndPrint(file)
