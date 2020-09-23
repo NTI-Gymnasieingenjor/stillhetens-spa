@@ -11,5 +11,5 @@ def sendFileAndPrint(filePath: str):
     print(request)
 
 
-for file in glob.glob("./*.css"):
+for file in glob.glob("../../public/assets/less/dist/*.css"):
     sendFileAndPrint(file)
