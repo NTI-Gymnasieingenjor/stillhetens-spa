@@ -23,7 +23,7 @@ tests:
   stage: test
   script:
     - cd tests/webtests
-    - python3 BaseTest.py
+    - python3 run.py
   only:
     changes:
       - public/**/*
