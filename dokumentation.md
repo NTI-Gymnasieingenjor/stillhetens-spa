@@ -1,9 +1,14 @@
 # Dokumentation
 
 ## Validering 
-Kör 
+Navigera in i tests\validation\ mappen med valfri kommandotolk.
+
+Kör: 
 ```python
 python cssValidering.py
 ``` 
-eller ```python cssValidering.py``` i tests\validation\ mappen i valfri kommandotolk. Detta kör valideringen lokalt. 
-
+eller 
+```python
+python htmlValidering.py
+``` 
+Detta kör valideringen lokalt.
