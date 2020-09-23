@@ -51,3 +51,10 @@ Använd **CSS Less** och **Bootstrap**
 **CSS 3** w/Less CSS & Bootstrap <br>
 **Javascript** (ECMAScript 2018) <br>
 **Python 3.8.2** <br>
+
+## Copyright
+
+### Fonter
+Vi använder [Google Fonts](https://fonts.google.com/) som källa till våra fonter, vilka är gratis att använda och har öppen källkod.
+
+### Bilder
