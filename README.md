@@ -12,21 +12,6 @@
 - Koden ska gå igenom valideringen
 - Hemsidans utseende och funktioner ska ha kontrollerats på mobil-och datorupplösningarna nedan: 
 
-**Dator** <br> 
-2560x1440 <br>
-1920x1080 <br>
-1280x720 <br>
-
-**Mobil** <br>
-iPad [768x1024] Pixel ratio[2]<br>
-iPhone X [375x812] Pixel ratio[3]<br>
-iPhone 6/7/8 [375x667] Pixel ratio[2]<br>
-iPhone 5 [320x568] Pixel ratio[2]<br>
-Galaxy S5 [360x640] Pixel ratio[3]<br>
-Galaxy S10 [412x869] Pixel ratio [3.5] <br>
-Galaxy Fold [280x653] Pixel ratio[2.625]<br>
-Galaxy Fold Landscape [586x820] Pixel ratio[2.625]
-
 ## Miljöutvecklingsstandard
 
 **Editor** - Visual Studio Code 1.49.1
