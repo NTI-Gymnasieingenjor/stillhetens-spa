@@ -10,6 +10,17 @@
 - Bearbetat feedback från gruppmedlemmar.
 - Koden ska vara kommenterad och dokumenterad
 - Koden ska gå igenom valideringen
+- Hemsidans utseende och funktioner ska ha kontrollerats på mobil-och datorupplösningarna nedan: 
+
+**Dator** <br> 
+2560x1440 <br>
+1920x1080 <br>
+1280x720 <br>
+
+**Mobil** <br>
+iPhone X/6/5 <br>
+Galaxy S5/S10[412x869] <br>
+Galaxy Fold <br>
 
 ## Miljöutvecklingsstandard
 
