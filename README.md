@@ -10,7 +10,7 @@
 - Bearbetat feedback från gruppmedlemmar.
 - Koden ska vara kommenterad och dokumenterad
 - Koden ska gå igenom valideringen
-- Hemsidans utseende och funktioner ska ha kontrollerats på mobil-och datorupplösningarna nedan: 
+- Hemsidans utseende ska ha kontrollerats på mobil-och datorupplösningarna som finns i: https://gitlab.com/thevikingtech/stillhetens-spa/-/blob/master/dokumentation.md#uppl%C3%B6sningar-som-vi-testar
 
 ## Miljöutvecklingsstandard
 
