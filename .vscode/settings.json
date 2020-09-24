@@ -3,5 +3,6 @@
     "cSpell.language": "en,sv,en-US",
     "cSpell.words": [
         "presenterbart"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
