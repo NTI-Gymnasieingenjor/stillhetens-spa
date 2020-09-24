@@ -27,24 +27,64 @@ Detta kör testerna lokalt.
 
 ### Skapa tester
 
-Öppna **tests/webtest** mappen i valfri editor som kan köra Python.
+Öppna **tests\webtest** mappen i valfri editor som kan köra Python.
 Skapa en ny python-fil i mappen webtests med namnet på testet.
 Importera sedan webdriver från selenium: 
 ```python
 from selenium import webdriver
 ``` 
 
-Skapa sedan en klass med samma namn som filen fast med stor bokstav i början
-Skapa en init funktion med variablerna driver och baseDivPath: def init(self, driver: webdriver.Chrome):
+Skapa sedan en klass med samma namn som filen fast med stor bokstav i början, i vårt exempel letar vi efter kontakinformation samt en titel.
+Skapa först en funktion så som "checkInfoByID" i exemplet nedan, där vi skickar med **self**, **ID:t som en string** och **texten som vi letar efter i ID:t**. <br>
+Skapa sedan en variabel som hittar elementen som ska testas genom deras ID. Använd sedan **assert** för att kolla om det ett påstående är sant, i vårt exempel så kollar den om texten vi letar efter finns i ID:ts element. Vi väljer även att printa ut texten om testet lyckas. 
+```python 
+class InfoTest:
 
-Navigera till run.py filen och importera testet du skapat genom att skriva: from pythonTests.(namn på testfilen) import TestKlassen
+     def checkInfoByID(self, id:str, refText:str):
+        elementText = self.driver.find_element_by_id(id).text
+        assert refText in elementText
+        print(elementText)
+```
+Skapa sedan en funktion med namnet "init" som skickar med **self** och **driver: webdriver.Chrome** som parametrar. Sedan skapa en variabel som heter "driver" och definiera den som driver. Kalla sedan funktionen som kör testet med de korrekta parametrarna. Funktionen bör vara strukturerad som i exemplet nedan:
+```python
+    def __init__(self, driver: webdriver.Chrome):
+        self.driver: webdriver.Chrome = driver
+        self.checkInfoByID("title", "Stillhetens Spa")
+        self.checkInfoByID("address", "Fjällgatan 32H")
+        self.checkInfoByID("zipCode", "981 39 KIRUNA")
+        self.checkInfoByID("phoneNumber", "0630‑555‑555")
+        self.checkInfoByID("mail", "info@thevikingtech.gitlab.io")
 
-Navigera tillbaka till test filen
-Om du t.ex vill hitta texten i en h1 tagg med ID:et “title” så skriver du:
-variabel1 = driver.find_element_by_id("title").text
+```
 
-Efter du hämtar någonting från hemsidan så måste du använda assert för att veta om det du har hämtat är korrekt
-Ett exempel skulle vara om du ville kontrollera om variabel1 inte är en tom string: assert variabel1 != “”
+Hela testfilen bör sedan vara strukturerad som i exemplet nedan:
+```python
+class InfoTest:
+
+     def checkInfoByID(self, id:str, refText:str):
+        elementText = self.driver.find_element_by_id(id).text
+        assert refText in elementText
+        print(elementText)
+
+    def __init__(self, driver: webdriver.Chrome):
+        self.driver: webdriver.Chrome = driver
+        self.checkInfoByID("title", "Stillhetens Spa")
+        self.checkInfoByID("address", "Fjällgatan 32H")
+        self.checkInfoByID("zipCode", "981 39 KIRUNA")
+        self.checkInfoByID("phoneNumber", "0630‑555‑555")
+        self.checkInfoByID("mail", "info@thevikingtech.gitlab.io")
+```
+
+Navigera efter det tillbaka till "run.py" och importera testet:
+```python
+from filNamn import KlassNamn
+```
+
+Kalla sedan klassen längst ned i filen med **driver** som parameter: 
+```python
+KlassNamn(driver)
+```
+
 
 ## Testa upplösningar
 ### Hur man testar upplösningar
