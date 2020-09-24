@@ -80,11 +80,9 @@ Navigera efter det tillbaka till "run.py" och importera testet:
 from filNamn import KlassNamn
 ```
 
-Kalla sedan klassen längst ned i filen med **driver** som parameter, ovanför **server.terminate()**:
+Kalla sedan klassen längst ned i filen med **driver** som parameter: 
 ```python
 KlassNamn(driver)
-
-server.terminate()
 ```
 
 
