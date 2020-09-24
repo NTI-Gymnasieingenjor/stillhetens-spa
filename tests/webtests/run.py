@@ -11,12 +11,14 @@ from infoTest import InfoTest
 # and chooses driver accordingly
 if platform == "linux":
     exe = ""
+    pythonSubfix = "3"
 else:
     exe = ".exe"
+    pythonSubfix = ""
 
 
 # Opens a localhost server with the port 6969 and in the public directory
-server = subprocess.Popen(["python3", "-m", "http.server",  "6969"],
+server = subprocess.Popen(["python" + pythonSubfix, "-m", "http.server",  "6969"],
                           cwd="../../public", stdout=open(os.devnull, "w"), stderr=open(os.devnull, "w"))
 
 # Closes the server at the end
