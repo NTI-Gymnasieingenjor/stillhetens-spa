@@ -24,7 +24,27 @@ Kör
 python run.py
 ``` 
 Detta kör testerna lokalt.
+
 ### Skapa tester
+
+Öppna **tests/webtest** mappen i valfri editor som kan köra Python.
+Skapa en ny python-fil i mappen webtests med namnet på testet.
+Importera sedan webdriver från selenium: 
+```python
+from selenium import webdriver
+``` 
+
+Skapa sedan en klass med samma namn som filen fast med stor bokstav i början
+Skapa en init funktion med variablerna driver och baseDivPath: def init(self, driver: webdriver.Chrome):
+
+Navigera till run.py filen och importera testet du skapat genom att skriva: from pythonTests.(namn på testfilen) import TestKlassen
+
+Navigera tillbaka till test filen
+Om du t.ex vill hitta texten i en h1 tagg med ID:et “title” så skriver du:
+variabel1 = driver.find_element_by_id("title").text
+
+Efter du hämtar någonting från hemsidan så måste du använda assert för att veta om det du har hämtat är korrekt
+Ett exempel skulle vara om du ville kontrollera om variabel1 inte är en tom string: assert variabel1 != “”
 
 ## Testa upplösningar
 ### Hur man testar upplösningar
