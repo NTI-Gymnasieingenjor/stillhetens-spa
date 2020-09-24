@@ -18,6 +18,7 @@
 1280x720 <br>
 
 **Mobil** <br>
+iPad
 iPhone X/6/5 <br>
 Galaxy S5/S10[412x869] <br>
 Galaxy Fold <br>
