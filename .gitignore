@@ -1,5 +1,4 @@
-<<<<<<< HEAD
 .vscode
-=======
 geckodriver.log
->>>>>>> af5cd434d999f2c7b88c5af6944c214d4085fa32
+tests/webtests/__pycache__/*
+*.pyc
