@@ -48,5 +48,5 @@ for file in glob.glob("../../public/*.html"):
 
 # If error or warning message occurs, validation fails
 if exitVar == True:
-    print(Back.RED + "Validation Failed" + Style.RESET_ALL)
+    print(Back.RED + "HTML Validation Failed" + Style.RESET_ALL)
     exit(1)

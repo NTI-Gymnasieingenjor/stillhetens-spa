@@ -53,5 +53,5 @@ for file in glob.glob("../../public/assets/less/dist/*.css"):
 
 # If error message occurs, validation fails
 if exitVar == True:
-    print(Back.RED + "Validation Failed" + Style.RESET_ALL)
+    print(Back.RED + "CSS Validation Failed" + Style.RESET_ALL)
     exit(1)
