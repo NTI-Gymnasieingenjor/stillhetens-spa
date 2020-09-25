@@ -39,7 +39,7 @@ def sendFileAndPrint(filePath: str):
             print("Fil:", filePath.replace("../../", ""))
             print("Radnummer:", messages["lastLine"])
             print("Meddelande:", messages["message"])
-            print("--------------------")
+    print("---------------------------------------------------------------------")
 
 
 # Looks for all the HTML files in the public directory to send to the validator
