@@ -19,6 +19,7 @@ class InfoTest:
 
     def __init__(self, driver: webdriver.Chrome):
         self.driver = driver
+        # Uses the imported colorama module to change the color of the output
         print('\033[1m' + Back.BLUE + "Startar test för kontaktinformation" + Style.RESET_ALL + '\033[0m')
         print("-------------------------------------")
         # Calls the function with the desired arguments

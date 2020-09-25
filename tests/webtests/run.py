@@ -6,6 +6,7 @@ import subprocess
 from atexit import register
 
 from infoTest import InfoTest
+from socialmediaTest import SocialMediaTest
 
 # Checks if the test is run on Linux or Windows,
 # and chooses driver accordingly
@@ -44,3 +45,4 @@ driver.get("http://localhost:6969/index.html")
 print("")
 
 InfoTest(driver)
+SocialMediaTest(driver)
