@@ -85,6 +85,11 @@ Kalla sedan klassen längst ned i filen med **driver** som parameter:
 KlassNamn(driver)
 ```
 
+### Kör gitlab-runner lokalt
+1. Uppdatera Windows åtminstånde till versionen 2004
+1. Följ guiden https://docs.microsoft.com/en-us/windows/wsl/install-win10
+1. Sedan följ guiden https://docs.docker.com/docker-for-windows/wsl/
+1. 
 
 ## Testa upplösningar
 ### Hur man testar upplösningar
