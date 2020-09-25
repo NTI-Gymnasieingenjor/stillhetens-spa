@@ -43,7 +43,7 @@ def sendFileAndPrint(filePath: str):
 
     # When there aren't any errors or warnings
     if errorCount == 0 and warningCount == 0:
-        print(Back.GREEN + Fore.BLACK + "Validation succeeded" + Style.RESET_ALL)
+        print(Back.GREEN + Fore.BLACK + "CSS Validation succeeded" + Style.RESET_ALL)
 
     print("---------------------------------------------------------------------")
 

@@ -21,7 +21,7 @@ def sendFileAndPrint(filePath: str):
     output = req.json()["messages"]
     # If the "messages" list is empty, the validation succeeds
     if len(output) == 0:
-        print(Back.GREEN + Fore.BLACK + "Validation succeeded" + Style.RESET_ALL)
+        print(Back.GREEN + Fore.BLACK + "HTML Validation succeeded" + Style.RESET_ALL)
         pass
     else:
         # For-loop that prints out all the errors and warnings in the "messages" list
