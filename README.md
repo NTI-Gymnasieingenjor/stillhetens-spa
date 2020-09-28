@@ -24,6 +24,7 @@ Plugins för VSCode:
 - Code Spell Checker
 - Swedish - Code Spell Checker
 - Python
+- Pylance
 - Sass/Less/Scss/Typescript/Javascript/Jade/Pug Compile Hero Prowscats
 - Less IntelliSense
 
