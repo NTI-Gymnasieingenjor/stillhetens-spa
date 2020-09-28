@@ -32,12 +32,12 @@ def sendFileAndPrint(filePath: str):
     errorCount = output["result"]["errorcount"]
     warningCount = output["result"]["warningcount"]
 
-    # When there are errors
+    # When there are errors, prints them out
     if errorCount > 0:
         global exitVar
         exitVar = True
         printMessage("errors", filePath)
-    # When there are warnings
+    # When there are warnings, prints them out
     if warningCount > 0:
         printMessage("warnings", filePath)
 
