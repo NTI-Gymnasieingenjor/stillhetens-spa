@@ -5,6 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
 }
 .header {
   text-align: center;
@@ -13,7 +14,7 @@ body {
 .header #title {
   margin-top: 0;
   font-size: 4em;
-  font-family: 'Alex Brush', cursive;
+  font-family: 'Allura', cursive;
 }
 .header .infoText {
   display: block;

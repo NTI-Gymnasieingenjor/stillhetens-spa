@@ -16,27 +16,28 @@ if platform == "linux":
 else:
     exe = ".exe"
     pythonSubfix = ""
+    
+port = "6969"
 
-
-# Opens a localhost server with the port 6969 and in the public directory
-server = subprocess.Popen(["python" + pythonSubfix, "-m", "http.server",  "6969"],
+# Opens a localhost server with the port 6969 in the public directory
+server = subprocess.Popen(["python" + pythonSubfix, "-m", "http.server",  port],
                           cwd="../../public", stdout=open(os.devnull, "w"), stderr=open(os.devnull, "w"))
 
-# Closes the server at the end
+# Closes the server before the script finishes
 def exitFunction():
     server.terminate()
     print("Test Finished")
 
 register(exitFunction)
 
-# Creates the variable for ChromeOptions()
+# Creates the variable to be able to set webdriver options
 options = webdriver.ChromeOptions()
 # Makes the test run in the terminal instead of the browser
 options.add_argument("--headless")
 # Gets the driver and defines its options
 driver = webdriver.Chrome(executable_path=(os.getcwd() + "/../chromedriver" + exe), options=options)
 # Navigates to the localhost, which is the site tested
-driver.get("http://localhost:6969/index.html")
+driver.get("http://localhost:" + port + "/index.html")
 
 print("")
 

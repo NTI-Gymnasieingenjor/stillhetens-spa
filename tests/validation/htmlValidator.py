@@ -21,7 +21,9 @@ def sendFileAndPrint(filePath: str):
     output = req.json()["messages"]
     # If the "messages" list is empty, the validation succeeds
     if len(output) == 0:
-        print(Back.GREEN + Fore.BLACK + "HTML Validation succeeded" + Style.RESET_ALL)
+        # Uses the imported colorama module to change the color of the output
+        print(Back.GREEN + Fore.BLACK +
+              "HTML Validation succeeded" + Style.RESET_ALL)
         pass
     else:
         # For-loop that prints out all the errors and warnings in the "messages" list
@@ -46,7 +48,7 @@ def sendFileAndPrint(filePath: str):
 for file in glob.glob("../../public/*.html"):
     sendFileAndPrint(file)
 
-# If error or warning message occurs, validation fails
+# If error or warning message occurs, the validation fails
 if exitVar == True:
     print(Back.RED + "HTML Validation Failed" + Style.RESET_ALL)
     exit(1)

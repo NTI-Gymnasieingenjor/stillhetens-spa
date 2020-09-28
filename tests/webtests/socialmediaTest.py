@@ -6,6 +6,7 @@ class SocialMediaTest:
     # The main function that gets the class and href of the icons
     def checkIconsByClass(self, className: str, refHref: str):
         # Gets the class of the icons
+        # The : WebElement sets a type hint which isn't required but makes the code more understandable 
         element: WebElement = self.driver.find_element_by_class_name(className)
         # Gets the href attribute of the icons
         elementHref = element.find_element_by_xpath('..').get_attribute("href")
