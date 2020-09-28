@@ -1,4 +1,4 @@
-# Stillhetens Spa
+# Stillhetens spa
 **Backlog:** https://docs.google.com/spreadsheets/d/1kiAmi3q5drQSVnUuvtOgJzjKzN5YOSItwBi-TEz5pnA/edit?ts=5f64c698#gid=0 <br>
 **Hemsida:** https://thevikingtech.gitlab.io/stillhetens-spa/<br>
 **Dokumentation:** https://gitlab.com/thevikingtech/stillhetens-spa/-/blob/master/dokumentation.md
@@ -24,6 +24,7 @@ Plugins för VSCode:
 - Code Spell Checker
 - Swedish - Code Spell Checker
 - Python
+- Pylance
 - Sass/Less/Scss/Typescript/Javascript/Jade/Pug Compile Hero Prowscats
 - Less IntelliSense
 
@@ -60,3 +61,7 @@ Använd **CSS Less** och **Bootstrap**
 Vi använder [Google Fonts](https://fonts.google.com/) som källa till våra fonter, vilka är gratis att använda och har öppen källkod.
 
 ### Bilder
+<dl>
+<dd><b>Sociala medier-ikoner</b></dd>
+<dd>Vi använder Font Awesome som källa till våra sociala medie-ikoner. Deras ikoner är gratis att använda och har öppen källkod. Vår användning av Facebooks, Twitters och Instagrams ikoner stämmer överens med villkoren av Font Awesomes [kostnadsfria licens](https://fontawesome.com/license/free), då vi endast använder ikonerna för att leda besökare av företagets hemsida till Stillhetens spas sociala medier.</dd>
+</dl>
