@@ -3,7 +3,6 @@ from selenium.webdriver.remote.webdriver import WebElement
 from colorama import Back, Style
 
 class SocialMediaTest:
-
     # The main function that gets the class and href of the icons
     def checkIconsByClass(self, className: str, refHref: str):
         # Gets the class of the icons
