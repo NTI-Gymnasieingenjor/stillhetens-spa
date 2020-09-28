@@ -24,7 +24,7 @@ class InfoTest:
         print('\033[1m' + Back.BLUE + "Startar test för kontaktinformation" + Style.RESET_ALL + '\033[0m')
         print("-------------------------------------")
 
-        self.checkInfoByID("title", "Stillhetens Spa", "", False)
+        self.checkInfoByID("title", "Stillhetens spa", "", False)
         self.checkInfoByID("address", "Fjällgatan 32H", "https://goo.gl/maps/2aqFdNDscvCgKKQR9")
         self.checkInfoByID("zipCode", "981 39 KIRUNA", "https://goo.gl/maps/2aqFdNDscvCgKKQR9")
         self.checkInfoByID("phoneNumber", "0630‑555‑555", "tel:0630-555-555")
