@@ -35,11 +35,12 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 # Gets the driver and defines its options
 driver = webdriver.Chrome(executable_path=(os.getcwd() + "/../chromedriver" + exe), options=options)
-
+# Navigates to the localhost, which is the site tested
 driver.get("http://localhost:6969/index.html")
 
 print("")
 
+# Runs all of the tests
 InfoTest(driver)
 SocialMediaTest(driver)
 OpenDaysTest(driver)
