@@ -13,6 +13,7 @@ def printMessage(type: str, filePath: str):
     for i in output[type]:
         print("---------------------------------------------------------------------")
         if type == "errors":
+            # Uses the imported colorama module to change the color of the output
             print(Back.RED + "ERROR" + Style.RESET_ALL)
         elif type == "warnings":
             print(Back.YELLOW + Fore.BLACK + "WARNING" + Style.RESET_ALL)
@@ -41,17 +42,19 @@ def sendFileAndPrint(filePath: str):
     if warningCount > 0:
         printMessage("warnings", filePath)
 
-    # When there aren't any errors or warnings
+    # When there aren't any errors or warnings, the validation succeeds
     if errorCount == 0 and warningCount == 0:
-        print(Back.GREEN + Fore.BLACK + "CSS Validation succeeded" + Style.RESET_ALL)
+        print(Back.GREEN + Fore.BLACK +
+              "CSS Validation succeeded" + Style.RESET_ALL)
 
     print("---------------------------------------------------------------------")
+
 
 # Looks for all the CSS files in the public/assets/less/dist directory to send to the validator
 for file in glob.glob("../../public/assets/less/dist/*.css"):
     sendFileAndPrint(file)
 
-# If error message occurs, validation fails
+# If error message occurs, the validation fails
 if exitVar == True:
     print(Back.RED + "CSS Validation Failed" + Style.RESET_ALL)
     exit(1)
