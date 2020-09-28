@@ -1,16 +1,17 @@
 from selenium import webdriver
-from colorama import Fore, Back, Style
+from selenium.webdriver.remote.webdriver import WebElement
+from colorama import Back, Style
 
 class InfoTest:
 
     # The main function that gets the desired text and checks if it matches the reference text
     def checkInfoByID(self, id: str, refText: str, refHref: str, hasHref=True):
         # Gets the element text
-        element = self.driver.find_element_by_id(id)
-        elementHref = element.get_attribute("href")
+        element: WebElement = self.driver.find_element_by_id(id)
         # Checks if the text includes the reference text
         assert refText in element.text
         if hasHref:
+            elementHref = element.get_attribute("href")
             assert elementHref == refHref
             print(element.text + ":", elementHref)
         else:
@@ -22,7 +23,7 @@ class InfoTest:
         # Uses the imported colorama module to change the color of the output
         print('\033[1m' + Back.BLUE + "Startar test för kontaktinformation" + Style.RESET_ALL + '\033[0m')
         print("-------------------------------------")
-        # Calls the function with the desired arguments
+
         self.checkInfoByID("title", "Stillhetens Spa", "", False)
         self.checkInfoByID("address", "Fjällgatan 32H", "https://goo.gl/maps/2aqFdNDscvCgKKQR9")
         self.checkInfoByID("zipCode", "981 39 KIRUNA", "https://goo.gl/maps/2aqFdNDscvCgKKQR9")

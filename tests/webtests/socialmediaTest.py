@@ -1,12 +1,13 @@
 from selenium import webdriver
-from colorama import Fore, Back, Style
+from selenium.webdriver.remote.webdriver import WebElement
+from colorama import Back, Style
 
 class SocialMediaTest:
 
     # The main function that gets the class and href of the icons
     def checkIconsByClass(self, className: str, refHref: str):
         # Gets the class of the icons
-        element = self.driver.find_element_by_class_name(className)
+        element: WebElement = self.driver.find_element_by_class_name(className)
         # Gets the href attribute of the icons
         elementHref = element.find_element_by_xpath('..').get_attribute("href")
         # Checks if the href links to the correct website
@@ -21,7 +22,7 @@ class SocialMediaTest:
         # Uses the imported colorama module to change the color of the output
         print('\033[1m' + Back.BLUE + "Startar test för sociala medie-länkar" + Style.RESET_ALL + '\033[0m')
         print("-------------------------------------")
-        # Calls the function with the desired arguments
+
         self.checkIconsByClass("fa-facebook-square", "https://www.facebook.com/ntiuppsala")
         self.checkIconsByClass("fa-twitter-square", "https://twitter.com/ntiuppsala")
         self.checkIconsByClass("fa-instagram-square", "https://www.instagram.com/ntiuppsala")
