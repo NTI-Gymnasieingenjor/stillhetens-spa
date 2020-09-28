@@ -22,6 +22,15 @@ body {
   width: max-content;
   margin: auto;
 }
+.openDaysContainer {
+  margin: 10px auto;
+}
+.openDaysContainer div {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
 .footer {
   text-align: center;
   margin-top: 10px;
