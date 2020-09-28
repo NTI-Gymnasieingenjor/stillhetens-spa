@@ -60,6 +60,7 @@ Använd **CSS Less** och **Bootstrap**
 Vi använder [Google Fonts](https://fonts.google.com/) som källa till våra fonter, vilka är gratis att använda och har öppen källkod.
 
 ### Bilder
-
-#### Sociala medier-ikoner
-Vi använder Font Awesome som källa till våra sociala medie-ikoner. Deras ikoner är gratis att använda och har öppen källkod. Vår användning av Facebooks, Twitters och Instagrams ikoner stämmer överens med villkoren av Font Awesomes [kostnadsfria licens](https://fontawesome.com/license/free), då vi endast använder ikonerna för att leda besökare av företagets hemsida till Stillhetens spas sociala medier.
+<dl>
+<dd><b>Sociala medier-ikoner</b></dd>
+<dd>Vi använder Font Awesome som källa till våra sociala medie-ikoner. Deras ikoner är gratis att använda och har öppen källkod. Vår användning av Facebooks, Twitters och Instagrams ikoner stämmer överens med villkoren av Font Awesomes [kostnadsfria licens](https://fontawesome.com/license/free), då vi endast använder ikonerna för att leda besökare av företagets hemsida till Stillhetens spas sociala medier.</dd>
+</dl>
