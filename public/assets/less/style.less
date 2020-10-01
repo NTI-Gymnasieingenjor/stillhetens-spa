@@ -1,64 +1,192 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100vh;
 }
 
-.header {
-    text-align: center;
-    width: 100vw;
+svg {
+    margin-bottom: 3px;
+}
 
-    #title {
-        margin-top: 0;
-        font-size: 4em;
-        font-family: 'Allura', cursive;
+nav {
+    z-index: 1;
+    text-align: center;
+    background-color: transparent;
+    font-family: 'Allura', cursive;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    >div::after {
+        content: '';
+        height: 2px;
+        width: 90%;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.4);
     }
 
+    h1 {
+        font-size: 2.5em;
+        margin-top: 10px;
+        line-height: 40px;
+    }
+
+    a {
+        &:hover {
+            color: white;
+        }
+
+        &:link {
+            color: white;
+        }
+
+        &:visited {
+            color: white;
+        }
+
+        &:active {
+            color: white;
+        }
+    }
+}
+
+.mainContent {
+    max-width: 2560px;
+    margin: auto;
+}
+
+.head {
+    width: 100%;
+    height: 100vh;
+    max-height: 1440px;
+    background-image: url("../../alex-bertha-Jyg7xHRmXiU-unsplash.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .headOverlay {
+        background-color: rgba(0, 0, 0, 0.25);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        
+        #headerSlogan {
+            font-family: 'Noto Serif KR', serif;
+            color: white;
+            font-size: 2.5em;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+    
+}
+
+footer {
+    padding: 25px 0;
+    background-color: rgb(69, 69, 69);
+    color: white;
+    text-align: center;
+
     .infoText {
+        color: white;
         display: block;
-        color: black;
-        text-decoration: none;
         width: max-content;
         margin: auto;
     }
-}
 
-.openDaysContainer{
-    margin: 10px auto;
-    div{
-        width: 150px;
-        height: 30px;
-        display: flex;
-        justify-content: space-between;
+    .textSpace {
+        height: 16px;
+        width: 16px;
+        display: inline-block;
     }
-}
 
-.footer {
-    text-align: center;
-    margin-top: 10px;
+    .list-group-item {
+        padding: 0;
+        background-color: transparent;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+        text-align: left;
+    }
 
     a {
         margin: 0 10px;
-        /* Matches the child's dimensions */
-        height: max-content;
-        width: max-content;
-        /* Removes a unwanted link that's usually located next to the link */
         display: inline-block;
 
-        .fa-facebook-square {
-            color: #3B5998;
+        .fab {
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 30px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: ease-out 0.1s;
         }
 
-        .fa-twitter-square {
-            color: #55ACEE;
+        .fab:hover {
+            transform: scale(1.1);
         }
 
-        .fa-instagram-square {
-            color: #d6249f;
+        .fa-facebook-f {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            color: white;
+        }
+    }
+
+    h4 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 4px;
+    }
+
+    .contactInfo {
+        margin: 0 50px;
+    }
+
+    .openTimes {
+        margin: 0 50px;
+    }
+
+    @media only screen and (max-width: 825px) {
+        .openTimes {
+            margin: 0;
+        }
+
+        .contactInfo {
+            margin: 0;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .openTimes {
+            margin: 0;
+        }
+
+        .contactInfo {
+            margin: 0;
         }
     }
 }
