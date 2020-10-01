@@ -19,20 +19,33 @@ class InfoTest:
         # Checks if the link is correct
         assert elementHref == refLink
         print(elementHref)
-        print("-------------------------------------")
+        
+    def checkImage(self, className:str, refSrc: str):
+        # Gets the WebElement from the className and fetches the css property "background-image" and replaces the localhost url with an empty string
+        elemSrc: WebElement = self.driver.find_element_by_class_name(className).value_of_css_property("background-image").replace("http://localhost:6969/assets/", "")
+        assert elemSrc == refSrc
+        print(refSrc)
 
     def __init__(self, driver: webdriver.Chrome):
         self.driver = driver
         # Uses the imported colorama module to change the color of the output
-        print('\033[1m' + Back.BLUE +
-              "Startar test för kontaktinformation" + Style.RESET_ALL + '\033[0m')
+        print('\033[1m' + Back.BLUE + "Startar test för kontaktinformation" + Style.RESET_ALL + '\033[0m')
         print("-------------------------------------")
 
+        print('\033[1m' + Back.GREEN + "Titlebar" + Style.RESET_ALL + '\033[0m')
         self.checkText("title", "Stillhetens spa")
+        self.checkLink("phoneNumberTitlebar", "0630‑555‑555", "tel:0630-555-555")
         print("-------------------------------------")
-        self.checkLink("address", "Fjällgatan 32H", "https://goo.gl/maps/2aqFdNDscvCgKKQR9")
-        self.checkLink("zipCode", "981 39 KIRUNA", "https://goo.gl/maps/2aqFdNDscvCgKKQR9")
+
+        print('\033[1m' + Back.GREEN + "Header" + Style.RESET_ALL + '\033[0m')
+        self.checkImage("head", 'url("alex-bertha-Jyg7xHRmXiU-unsplash.jpg")')
+        self.checkText("headerSlogan", "En unik och avkopplande upplevelse");
+        print("-------------------------------------")
+
+        print('\033[1m' + Back.GREEN + "Footer" + Style.RESET_ALL + '\033[0m')
+        self.checkLink("address", "Fjällgatan 32H\n981 39 KIRUNA", "https://goo.gl/maps/2aqFdNDscvCgKKQR9")
         self.checkLink("phoneNumber", "0630‑555‑555", "tel:0630-555-555")
         self.checkLink("mail", "info@thevikingtech.gitlab.io", "mailto:info@thevikingtech.gitlab.io")
+        print("-------------------------------------")
 
         print("")

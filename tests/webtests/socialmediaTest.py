@@ -13,7 +13,7 @@ class SocialMediaTest:
         # Checks if the href links to the correct website
         assert elementHref == refHref
         # Replaces the "fa-" in the class name with a whitespace
-        print(className.replace("fa-", "") + ":", elementHref)
+        print(className.replace("fa-", "").replace("-f", "") + ":", elementHref)
     
         print("-------------------------------------")
 
@@ -23,8 +23,8 @@ class SocialMediaTest:
         print('\033[1m' + Back.BLUE + "Startar test för sociala medie-länkar" + Style.RESET_ALL + '\033[0m')
         print("-------------------------------------")
 
-        self.checkIconsByClass("fa-facebook-square", "https://www.facebook.com/ntiuppsala")
-        self.checkIconsByClass("fa-twitter-square", "https://twitter.com/ntiuppsala")
-        self.checkIconsByClass("fa-instagram-square", "https://www.instagram.com/ntiuppsala")
+        self.checkIconsByClass("fa-facebook-f", "https://www.facebook.com/ntiuppsala")
+        self.checkIconsByClass("fa-twitter", "https://twitter.com/ntiuppsala")
+        self.checkIconsByClass("fa-instagram", "https://www.instagram.com/ntiuppsala")
 
         print("")
