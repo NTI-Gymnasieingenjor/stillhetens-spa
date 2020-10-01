@@ -49,6 +49,8 @@ def sendFileAndPrint(filePath: str):
 
     print("---------------------------------------------------------------------")
 
+# Builds the site with jekyll
+os.system("cd ../../; ./runJekyll -b")
 
 # Looks for all the CSS files in the _site/assets/less/dist directory to send to the validator
 for file in glob.glob("../../_site/assets/less/dist/*.css"):

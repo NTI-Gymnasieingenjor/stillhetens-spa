@@ -19,6 +19,8 @@ else:
     
 port = "6969"
 
+# Builds the site with jekyll
+os.system("cd ../../; ./runJekyll -b")
 # Opens a localhost server with the port 6969 in the _site directory
 server = subprocess.Popen(["python" + pythonSubfix, "-m", "http.server",  port],
                           cwd="../../_site", stdout=open(os.devnull, "w"), stderr=open(os.devnull, "w"))

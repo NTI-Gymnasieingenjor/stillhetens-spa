@@ -1,11 +1,12 @@
 import requests
-import json
+import os
 import glob
 from colorama import Fore, Back, Style
 
 # The variable that turns to true when there's an error
 global exitVar
 exitVar = False
+
 
 
 def sendFileAndPrint(filePath: str):
@@ -43,6 +44,9 @@ def sendFileAndPrint(filePath: str):
             print("Meddelande:", messages["message"])
     print("---------------------------------------------------------------------")
 
+
+# Builds the site with jekyll
+os.system("cd ../../; ./runJekyll -b")
 
 # Looks for all the HTML files in the _site directory to send to the validator
 for file in glob.glob("../../_site/*.html"):
