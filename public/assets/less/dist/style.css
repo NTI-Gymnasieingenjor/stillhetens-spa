@@ -1,55 +1,158 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   font-family: 'Roboto', sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
-.header {
+svg {
+  margin-bottom: 3px;
+}
+nav {
+  z-index: 1;
   text-align: center;
-  width: 100vw;
-}
-.header #title {
-  margin-top: 0;
-  font-size: 4em;
+  background-color: transparent;
   font-family: 'Allura', cursive;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-.header .infoText {
+nav > div::after {
+  content: '';
+  height: 2px;
+  width: 90%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+nav h1 {
+  font-size: 2.5em;
+  margin-top: 10px;
+  line-height: 40px;
+}
+nav a:hover {
+  color: white;
+}
+nav a:link {
+  color: white;
+}
+nav a:visited {
+  color: white;
+}
+nav a:active {
+  color: white;
+}
+.mainContent {
+  max-width: 2560px;
+  margin: auto;
+}
+.head {
+  width: 100%;
+  height: 100vh;
+  max-height: 1440px;
+  background-image: url("../../alex-bertha-Jyg7xHRmXiU-unsplash.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.head .headOverlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.head .headOverlay #headerSlogan {
+  font-family: 'Noto Serif KR', serif;
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+footer {
+  padding: 25px 0;
+  background-color: #454545;
+  color: white;
+  text-align: center;
+}
+footer .infoText {
+  color: white;
   display: block;
-  color: black;
-  text-decoration: none;
   width: max-content;
   margin: auto;
 }
-.openDaysContainer {
-  margin: 10px auto;
-}
-.openDaysContainer div {
-  width: 150px;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.footer {
-  text-align: center;
-  margin-top: 10px;
-}
-.footer a {
-  margin: 0 10px;
-  /* Matches the child's dimensions */
-  height: max-content;
-  width: max-content;
-  /* Removes a unwanted link that's usually located next to the link */
+footer .textSpace {
+  height: 16px;
+  width: 16px;
   display: inline-block;
 }
-.footer a .fa-facebook-square {
-  color: #3B5998;
+footer .list-group-item {
+  padding: 0;
+  background-color: transparent;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  text-align: left;
 }
-.footer a .fa-twitter-square {
-  color: #55ACEE;
+footer a {
+  margin: 0 10px;
+  display: inline-block;
 }
-.footer a .fa-instagram-square {
-  color: #d6249f;
+footer a .fab {
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: ease-out 0.1s;
+}
+footer a .fab:hover {
+  transform: scale(1.1);
+}
+footer a .fa-facebook-f {
+  background: #3B5998;
+  color: white;
+}
+footer a .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+footer a .fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+}
+footer h4 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 4px;
+}
+footer .contactInfo {
+  margin: 0 50px;
+}
+footer .openTimes {
+  margin: 0 50px;
+}
+@media only screen and (max-width: 825px) {
+  footer .openTimes {
+    margin: 0;
+  }
+  footer .contactInfo {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  footer .openTimes {
+    margin: 0;
+  }
+  footer .contactInfo {
+    margin: 0;
+  }
 }
