@@ -1,4 +1,4 @@
-image: thevikingtech/pythonselenium:Requests
+image: thevikingtech/pythonselenium:latest
 
 workflow:
   rules:
@@ -7,8 +7,9 @@ workflow:
 pages:
   stage: deploy
   script:
+    - jekyll build -s ./public
     - mkdir .public
-    - cp -r ./public/* .public
+    - cp -r ./_site/* .public
     - mv .public public
   artifacts:
     paths:

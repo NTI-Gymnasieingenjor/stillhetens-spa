@@ -1,0 +1,9 @@
+- day: Mån-Fre
+  time: 10‑16
+  id: weekdays
+- day: Lördag
+  time: 12‑15
+  id: saturday
+- day: Söndag
+  time: Stängt
+  id: sunday

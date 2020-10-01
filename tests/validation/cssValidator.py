@@ -50,8 +50,8 @@ def sendFileAndPrint(filePath: str):
     print("---------------------------------------------------------------------")
 
 
-# Looks for all the CSS files in the public/assets/less/dist directory to send to the validator
-for file in glob.glob("../../public/assets/less/dist/*.css"):
+# Looks for all the CSS files in the _site/assets/less/dist directory to send to the validator
+for file in glob.glob("../../_site/assets/less/dist/*.css"):
     sendFileAndPrint(file)
 
 # If error message occurs, the validation fails

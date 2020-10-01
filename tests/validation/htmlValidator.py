@@ -44,8 +44,8 @@ def sendFileAndPrint(filePath: str):
     print("---------------------------------------------------------------------")
 
 
-# Looks for all the HTML files in the public directory to send to the validator
-for file in glob.glob("../../public/*.html"):
+# Looks for all the HTML files in the _site directory to send to the validator
+for file in glob.glob("../../_site/*.html"):
     sendFileAndPrint(file)
 
 # If error or warning message occurs, the validation fails

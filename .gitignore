@@ -2,3 +2,5 @@
 geckodriver.log
 tests/webtests/__pycache__/*
 *.pyc
+.jekyll-cache
+_site

@@ -19,9 +19,9 @@ else:
     
 port = "6969"
 
-# Opens a localhost server with the port 6969 in the public directory
+# Opens a localhost server with the port 6969 in the _site directory
 server = subprocess.Popen(["python" + pythonSubfix, "-m", "http.server",  port],
-                          cwd="../../public", stdout=open(os.devnull, "w"), stderr=open(os.devnull, "w"))
+                          cwd="../../_site", stdout=open(os.devnull, "w"), stderr=open(os.devnull, "w"))
 
 # Closes the server before the script finishes
 def exitFunction():
