@@ -12,7 +12,8 @@ cache:
 
 before_script:
   - sudo gem install bundler
-  - bundle install -j $(nproc) --path vendor/ruby
+  - bundle config set path 'vendor/ruby'
+  - bundle install -j $(nproc)
     
 pages:
   stage: deploy
