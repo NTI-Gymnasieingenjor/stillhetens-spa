@@ -35,6 +35,7 @@ class InfoTest:
         print('\033[1m' + Back.GREEN + "Titlebar" + Style.RESET_ALL + '\033[0m')
         self.checkText("title", "Stillhetens spa")
         self.checkLink("phoneNumberTitlebar", "0630‑555‑555", "tel:0630-555-555")
+        self.checkLink("navAnchor", "Öppettider", "http://localhost:6969/index.html#footer")
         print("-------------------------------------")
 
         print('\033[1m' + Back.GREEN + "Header" + Style.RESET_ALL + '\033[0m')
