@@ -5,6 +5,7 @@ workflow:
     - if: '$CI_COMMIT_BRANCH'
 
 cache:
+  # Caches and uses the cache for all branches
   key: one-key-to-rule-them-all
   paths:
     - vendor/ruby
