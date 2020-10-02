@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ "$1" == "-b" ]]; then
-    jekyll build -s ./public
+    bundle exec jekyll build -s ./public
 elif [[ "$1" == "-s" || "$1" == "" ]]; then
-    jekyll serve -s ./public
+    bundle exec jekyll serve -s ./public
 fi

@@ -4,10 +4,19 @@ workflow:
   rules:
     - if: '$CI_COMMIT_BRANCH'
 
+cache:
+  key: one-key-to-rule-them-all
+  paths:
+    - vendor/ruby
+
+before_script:
+  - sudo gem install bundler
+  - bundle install -j $(nproc) --path vendor/ruby
+    
 pages:
   stage: deploy
   script:
-    - jekyll build -s ./public
+    - bundle exec jekyll build -s ./public
     - mkdir .public
     - cp -r ./_site/* .public
     - mv .public public
